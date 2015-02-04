@@ -1,7 +1,7 @@
 FROM debian:stable
 MAINTAINER RN_Sigurnosna_rjesenja@recro-net.hr
 
-RUN apt-get -q update && apt-get install -y curl procps vim openjdk-7-jre-headless net-tools \
+RUN apt-get -q update && apt-get install -y curl procps vim openjdk-7-jre-headless net-tools tcpdump \
   && curl -o /tmp/logstash-1.4.2.tar.gz -L https://download.elasticsearch.org/logstash/logstash/logstash-1.4.2.tar.gz \
   && tar -xzvf /tmp/logstash-1.4.2.tar.gz \
   && mv ./logstash-1.4.2 /opt/logstash \
