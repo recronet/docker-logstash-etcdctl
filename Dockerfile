@@ -9,5 +9,6 @@ RUN apt-get -q update && apt-get install -y curl procps vim openjdk-7-jre-headle
   && curl -L https://github.com/coreos/etcd/releases/download/v0.4.6/etcd-v0.4.6-linux-amd64.tar.gz -o /tmp/etcd-v0.4.6-linux-amd64.tar.gz \
   && tar xzvf /tmp/etcd-v0.4.6-linux-amd64.tar.gz etcd-v0.4.6-linux-amd64/etcdctl \
   && mv etcd-v0.4.6-linux-amd64/etcdctl /usr/bin/ \
+  && mkdir /opt/logstash/config \
   && rmdir etcd-v0.4.6-linux-amd64 \
   && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/log/*
